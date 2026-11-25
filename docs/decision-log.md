@@ -2,7 +2,7 @@
 
 | Date | Decision | Rationale |
 |---|---|---|
-| 2026-11-25 | Build Ruh Al Ruh as a new application in `full Ruh Al Ruh project build/` | The attached document describes a system with no existing code in this workspace; a greenfield build avoids inheriting unrelated artifacts |
+| 2026-11-25 | Build Ruh Al Ruh as a new application at the repository root | The attached document describes a system with no existing code in this workspace; a greenfield build avoids inheriting unrelated artifacts |
 | 2026-11-25 | Offer support on risk signals; never automatically override the assistant, notify anyone, or store a hidden risk score | Consent-aware safety preserves member agency and avoids the harm of false positives in keyword detection |
 | 2026-11-25 | Treat the attached document as a specification, not a description of implemented work | Its "implemented" and "copy these files" sections cannot be verified against any code |
 | 2026-11-25 | Use `HttpOnly` cookie sessions with refresh and revocation instead of a seven-day JWT in `localStorage` | Conversation content is sensitive; reducing XSS exposure is worth the extra infrastructure |

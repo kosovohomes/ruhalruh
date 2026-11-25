@@ -47,7 +47,7 @@ Support signals are read only from the latest member message. They produce a vis
 ## Layout
 
 ```
-full Ruh Al Ruh project build/
+.  (repository root)
 ├── .env.example
 ├── .github/workflows/ci.yml
 ├── CONTEXT.md

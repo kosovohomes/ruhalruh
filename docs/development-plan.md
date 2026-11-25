@@ -5,7 +5,7 @@ Status: Phases 1–4 are complete locally. Application work continues with Phase
 ## Governing rules
 
 - The attached technical document is a specification, not a description of existing code. Nothing in it has been implemented.
-- This is a greenfield build in `full Ruh Al Ruh project build/`. Existing workspace artifacts are unrelated and are not reused.
+- This is a greenfield build at the repository root. Existing workspace artifacts are unrelated and are not reused.
 - Support offers replace the document's automatic crisis override. No automatic interception, notification, or hidden risk scoring.
 - Verify current stable framework and model versions at kickoff; the document's pinned versions are treated as historical.
 - All conversation content and error payloads are sensitive data. Never place them in logs, analytics, or error reports.
