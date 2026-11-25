@@ -75,7 +75,7 @@ export default function Home() {
               </Link>
             </div>
             <p className="mt-6 text-xs text-ink/45">
-              Text conversations work locally. Hosted storage begins when a Neon database is connected.
+              Text conversations are saved to your private account. Voice support is planned for a later release.
             </p>
           </div>
 
@@ -139,7 +139,7 @@ export default function Home() {
             <div className="space-y-4">
               {[
                 ["Nothing automatic", "No forced escalation, no third-party notification."],
-                ["Planned resources", "Reviewed local contacts arrive in the next release."],
+                ["Reviewed resources", "US contacts are available in English and Spanish. Other jurisdictions need approved sources first."],
                 ["Visible choices", "Any request for support appears in your own conversation."],
               ].map(([title, body]) => (
                 <div key={title} className="rounded-2xl border border-paper/15 bg-paper/5 p-6">
@@ -172,7 +172,7 @@ export default function Home() {
         <div className="mx-auto flex max-w-6xl flex-col gap-4 px-6 py-10 text-sm text-ink/55 sm:flex-row sm:items-center sm:justify-between">
           <p className="font-display text-lg text-ink">Ruh Al Ruh</p>
           <p>Soul of the soul · A quiet place, always open.</p>
-          <p>Text preview · Phase 3</p>
+          <p>Text conversations · Phases 1–4</p>
         </div>
       </footer>
     </div>

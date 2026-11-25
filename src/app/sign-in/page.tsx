@@ -33,8 +33,8 @@ export default function SignInPage() {
             support is always offered — never decided for you.
           </p>
           <p className="mt-8 text-sm text-ink/50">
-            Local preview: accounts and conversations are held in the server process until a hosted
-            database is connected.
+            Your account and conversations are saved to hosted storage. Nothing is shared without
+            your choice.
           </p>
         </div>
         <AuthForm />
