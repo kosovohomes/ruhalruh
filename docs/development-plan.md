@@ -1,6 +1,6 @@
 # Development Plan — Ruh Al Ruh
 
-Status: Phases 1–4 are complete locally. Application work continues with Phase 5; hosted storage remains pending a Neon connection string.
+Status: Phases 1–4 are complete locally. Application work continues with Phase 5; hosted storage is connected to Neon with migrations applied.
 
 ## Governing rules
 
@@ -31,7 +31,7 @@ Phases 1–4 form the minimum credible first release. Phases 5–8 follow.
 1. Initialise package manager, TypeScript, Tailwind, ESLint, Prettier, Vitest, Playwright.
 2. Add CI running typecheck, lint, unit tests and E2E tests on every pull request.
 3. Add Zod-validated environment loading and `.env.example` parity test.
-4. Prepare Neon/Postgres migrations in order so foreign keys resolve; apply them when a connection string is available.
+4. Prepare Neon/Postgres migrations in order so foreign keys resolve; they have been applied to Neon.
 5. Define `users`, `sessions`, `messages`, `error_logs`, `families` with constraints, indexes and triggers.
 6. Define RLS policies: members may only read and write their own sessions and messages; admin access is explicit and audited.
 7. Add a transaction-scoped data-access layer; member requests run as `rrah_app`, and admin jobs explicitly switch to `rrah_admin`.

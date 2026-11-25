@@ -26,7 +26,7 @@ npm run build
 npm run test:e2e
 ```
 
-All five commands pass: 73 unit tests and 15 browser tests. The migrations are written for generic Postgres/Neon but have not been applied to a live database because no connection string has been supplied.
+All five commands pass: 73 unit tests and 15 browser tests. The migrations have been applied to the Neon database and the roles, RLS policies and member transaction context were verified there.
 
 The landing page links to a working `/sign-in` page and `/conversation` room. The language selector still shows sample greetings, but the conversation room uses the member's chosen language for real replies.
 
@@ -73,4 +73,4 @@ Support signals are read only from the latest member message. They produce a vis
 
 ## Next step
 
-Reviewed support content now covers the United States in English and Spanish. Other jurisdictions need their own approved sources before entries are added. Hosted storage can be connected once a Neon connection string is supplied and the migrations in `db/migrations/` are applied. A real model provider follows after its own decision and evaluation harness.
+Reviewed support content now covers the United States in English and Spanish. Other jurisdictions need their own approved sources before entries are added. Hosted storage is connected to Neon with the migrations in `db/migrations/` applied. A real model provider follows after its own decision and evaluation harness.
