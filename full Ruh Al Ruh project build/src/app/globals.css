@@ -1,0 +1,112 @@
+@import "tailwindcss";
+
+@theme {
+  --color-paper: #f7f3ec;
+  --color-ink: #123b3a;
+  --color-accent: #b96d3f;
+  --font-display: var(--font-display-face), Georgia, serif;
+  --font-sans: var(--font-sans-face), system-ui, sans-serif;
+}
+
+:root {
+  color-scheme: light;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+*:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 3px;
+}
+
+.font-display {
+  font-family: var(--font-display);
+}
+
+/* A doorway motif: nested arches around a single steady light. */
+.doorway {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  display: grid;
+  place-items: center;
+}
+
+.doorway__halo {
+  position: absolute;
+  inset: 10%;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(185, 109, 63, 0.16), transparent 68%);
+  filter: blur(14px);
+  animation: doorway-breathe 8s ease-in-out infinite;
+}
+
+.doorway__arch {
+  position: absolute;
+  bottom: 4%;
+  border: 1px solid rgba(18, 59, 58, 0.2);
+  border-bottom: 0;
+  border-top-left-radius: 999px;
+  border-top-right-radius: 999px;
+}
+
+.doorway__arch--outer {
+  width: 82%;
+  height: 82%;
+  opacity: 0.45;
+}
+
+.doorway__arch--middle {
+  width: 62%;
+  height: 62%;
+  opacity: 0.7;
+}
+
+.doorway__arch--inner {
+  width: 42%;
+  height: 42%;
+  border-color: rgba(185, 109, 63, 0.55);
+  background: linear-gradient(to top, rgba(185, 109, 63, 0.08), transparent 60%);
+}
+
+.doorway__light {
+  position: absolute;
+  bottom: 11%;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--color-accent);
+  box-shadow: 0 0 34px 12px rgba(185, 109, 63, 0.24);
+  animation: doorway-breathe 6s ease-in-out infinite;
+}
+
+@keyframes doorway-breathe {
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 0.78;
+  }
+  50% {
+    transform: scale(1.06);
+    opacity: 1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .doorway__halo,
+  .doorway__light {
+    animation: none;
+  }
+}
